@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Business Website</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<!-- Header section -->
+	<header class="header header_gray">
+		<div class="container">
+			<div class="box-contacts">
+				<div class="block-phone">
+					<img class="block-phone__img" src="./images/phone.png" alt="">
+					<span class="block-phone__text">6337 3128</span>
+				</div>
+				<div class="block-email">
+					<img class="block-phone__img" src="./images/email.png" alt="">
+					<span class="block-email__text">info@business.co</span>
+				</div>
+				<div class="block-facebook">
+					<a class="block-facebook__link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header section -->
+	<!-- Page nav section -->
+	<div class="header-wrap">
+		<div class="header header_nav">
+			<div class="container">
+				<div class="box-nav clearfix">
+					<div class="logo">
+						<a href="#" class="logo__link">
+							<img class="logo__img" src="images/logo.png" alt="Business">
+						</a>
+					</div>
+					<div class="nav">
+						<ul class="menu nav_first-marker">
+							<li class="menu__item">
+								<a class="menu__link" href="#page_promo">home</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#page_about_us">about us</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#page_approaches">our approch</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#page_portfolio">our work</a>
+							</li>
+						</ul>
+						<button type="button" class="btn btn_nav">free consultation</button>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+	</div>
+		
+	<!-- End page nav section -->
+	<div class="backdrop"></div>
+	<div class="wrap-popup">
+		<div class="popup popup_hidden">
+			<div class="cross-cancel cross-cancel_consultation"></div>
+			<div class="form-desc">
+				<p class="form-desc__text">Enter your question</p>
+			</div>
+			<div class="box-form box-form_consultation">
+				<form class="form" method="POST" action="/">
+					<div class="form-row">
+						<input class="form-row__input" name="email" placeholder="Your e-mail">
+					</div>
+					<div class="form-row">
+						<input class="form-row__input" type="username" name="username" placeholder="Your name">
+					</div>
+					<div class="form-row">
+						<textarea class="form-row__textarea" name="question" placeholder="Your question"></textarea>
+					</div>
+					<button class="btn btn_submit_consultation">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+		
+	
+	<main class="main">
+		<!-- Page promo section -->
+		<div class="page page_promo" id="page_promo">
+			<div class="container">
+				<div class="promo">
+					<h1 class="promo__title">We Provoding</h1>
+					<p class="promo__text">Social Media marketing for businesses</p>
+					<button type="button" class="btn btn_promo">free consultation</button>
+				</div>
+			</div>
+		</div>
+		<!-- End page promo section -->
+		<!-- Page services section -->
+		<div class="page" id="page_about_us">
+			<div class="container">
+				<div class="page-header">
+					<h2 class="page__title opacity">About Us</h2>
+					<p class="page__lead opacity">We are added our major Services</p>
+				</div>
+				<hr class="page__line opacity">
+				<div class="block-services">
+					<div class="box-service opacity">
+						<img class="box-service__img" src="./images/facebook_m.png" alt="">
+						<h2 class="box-service__title">facebook marketing</h2>
+						<p class="box-service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum natus quod sed, illo commodi quibusdam.</p>
+					</div>
+					<div class="box-service opacity">
+						<img class="box-service__img" src="./images/landing_page_C.png" alt="">
+						<h2 class="box-service__title">landing pages creation</h2>
+						<p class="box-service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum natus quod sed, illo commodi quibusdam.</p>
+					</div>
+					<div class="box-service opacity">
+						<img class="box-service__img" src="./images/ads_M.png" alt="">
+						<h2 class="box-service__title">ads management</h2>
+						<p class="box-service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum natus quod sed, illo commodi quibusdam.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End page services section -->
+
+		<!-- Page approach section -->
+		<div class="page page_approaches" id="page_approaches">
+			<div class="container">
+				<div class="page-header">
+					<h2 class="page__title opacity">Our Approach</h2>
+					<p class="page__lead opacity">Check Our approaches step by step (how we do it)</p>
+				</div>
+				<hr class="page__line opacity">
+				<div class="block-approaches">
+					<div class="wrap-box-aproach">
+						<div class="box-approach opacity">
+							<div class="approach-photo">
+								<img class="approach-photo__img" src="./images/our_approch_step1.png" alt="">
+							</div>
+							<div class="approach-content">
+								<h2 class="approach-content__title">Step 1 : Heading Here</h2>
+								<p class="approach-content__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est architecto beatae quas, libero minus. Iusto libero odit, sequi eum pariatur porro neque quam ut, voluptate tempora inventore nemo, voluptatem corporis!</p>
+							</div>
+							<div class="num-step">
+								<h1 class="num-step__number">1</h1>
+								<p class="num-step__text">step</p>
+							</div>
+						</div>
+					</div>
+					<div class="wrap-box-aproach">
+						<div class="box-approach opacity box-approach_reverse">
+						<div class="approach-photo">
+							<img class="approach-photo__img" src="./images/our_approch_step2.png" alt="">
+						</div>
+						<div class="approach-content">
+							<h2 class="approach-content__title">Step 2 : Heading Here</h2>
+							<p class="approach-content__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est architecto beatae quas, libero minus. Iusto libero odit, sequi eum pariatur porro neque quam ut, voluptate tempora inventore nemo, voluptatem corporis!</p>
+						</div>
+						<div class="num-step num-step_reverse">
+							<h1 class="num-step__number">2</h1>
+							<p class="num-step__text">step</p>
+						</div>
+					</div>
+					</div>
+					<div class="wrap-box-aproach">
+						<div class="box-approach opacity">
+						<div class="approach-photo">
+							<img class="approach-photo__img" src="./images/our_approch_step3.png" alt="">
+						</div>
+						<div class="approach-content">
+							<h2 class="approach-content__title">Step 3 : Heading Here</h2>
+							<p class="approach-content__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est architecto beatae quas, libero minus. Iusto libero odit, sequi eum pariatur porro neque quam ut, voluptate tempora inventore nemo, voluptatem corporis!</p>
+						</div>
+						<div class="num-step">
+							<h1 class="num-step__number">3</h1>
+							<p class="num-step__text">step</p>
+						</div>
+					</div>
+					</div>
+					<div class="wrap-box-aproach">
+						<div class="box-approach opacity box-approach_reverse">
+						<div class="approach-photo">
+							<img class="approach-photo__img" src="./images/our_approch_step4.png" alt="">
+						</div>
+						<div class="approach-content">
+							<h2 class="approach-content__title">Step 4 : Heading Here</h2>
+							<p class="approach-content__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est architecto beatae quas, libero minus. Iusto libero odit, sequi eum pariatur porro neque quam ut, voluptate tempora inventore nemo, voluptatem corporis!</p>
+						</div>
+						<div class="num-step num-step_reverse">
+							<h1 class="num-step__number">4</h1>
+							<p class="num-step__text">step</p>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End page approach section -->
+		<!-- Page portfolio section -->
+		<div class="page page_portfolio" id="page_portfolio">
+			<div class="container">
+				<div class="page-header">
+					<h1 class="page__title opacity">Our Work</h1>
+					<p class="page__lead opacity">We are added our featured works below</p>
+				</div>
+				<hr class="page__line page__line_white opacity">
+				<div class="project-rows">
+					<div class="projects">
+						<div class="box-project opacity">
+							<img class="box-project__icon" src="./images/our_works_plane.png" alt="">
+							<h1 class="box-project__title">Project Name</h1>
+							<p class="box-project__text">Facebook marketing</p>
+						</div>
+						<div class="box-project box-project_hidden opacity">
+							<img class="box-project__img" src="./images/our_works_01.png" alt="">
+						</div>
+						<div class="box-project opacity">
+							<img class="box-project__icon" src="./images/our_works_plane.png" alt="">
+							<h1 class="box-project__title">Project Name</h1>
+							<p class="box-project__text">Landing page</p>
+						</div>
+						<div class="box-project box-project_hidden opacity">
+							<img class="box-project__img" src="./images/our_works_02.png" alt="">
+						</div>
+					</div>
+					<div class="projects">
+						<div class="box-project box-project_hidden opacity">
+							<img class="box-project__img" src="./images/our_works_03.png" alt="">
+						</div>
+						<div class="box-project opacity">
+							<img class="box-project__icon" src="./images/our_works_plane.png" alt="">
+							<h1 class="box-project__title">Project Name</h1>
+							<p class="box-project__text">Landing page</p>
+						</div>
+						<div class="box-project box-project_hidden opacity">
+							<img class="box-project__img" src="./images/our_works_04.png" alt="">
+						</div>
+						<div class="box-project opacity">
+							<img class="box-project__icon" src="./images/our_works_plane.png" alt="">
+							<h1 class="box-project__title">Project Name</h1>
+							<p class="box-project__text">Facebook marketing</p>
+						</div>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+
+		<div class="page page_form">
+			<div class="container">
+				<div class="page-header">
+					<h1 class="page__title opacity">Get Your Free Facebook Analysis Now</h1>
+					<p class="page__lead opacity">Enter your details below</p>
+					<div class="open-form opacity">
+						<div class="open-form__btn"></div>
+					</div>
+				</div>
+				<div class="wrap-block-form">
+					<div class="block-form">
+						<div class="cross-cancel cross-cancel_contact"></div>
+						<div class="form-desc">
+							<p class="form-desc__text">Sit down with our experts to receive a free customized marketing plan for your busi-<br>ness + LearnHow To Use Google and Facebook to get 5000% ROI or more</p>
+						</div>
+						<div class="box-form">
+							<form class="form" method="POST" action="/">
+							<div class="form-row">
+								<input class="form-row__input" name="username" placeholder="Your Name">
+							</div>
+							<div class="form-row">
+								<input class="form-row__input" type="tel" name="telephone" placeholder="Contact Number">
+							</div>
+							<div class="form-row">
+								<input class="form-row__input" name="company-name" placeholder="Company Name">
+							</div>
+							<button class="btn btn_submit_form">submit now</button>
+						</form>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="page page_contact">
+			<div class="container">
+				<div class="page-header">
+					<h1 class="page__title opacity">Get in touch</h1>
+				</div>
+				<div class="social_media">
+					<div class="social facebook opacity">
+						<a class="social__link social__link_facebook" href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>    
+					</div>
+					<div class="social twitter opacity">
+						<a class="social__link social__link_twitter" href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+					</div>
+					<div class="social google-plus opacity">
+						<a class="social__link social__link_google-plus" href="#" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
+					</div>
+					<div class="social linkedin opacity">
+						<a class="social__link social__link_linkedin" href="#" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+					</div>
+				</div>
+				<div class="box-subscribe">
+					<h2 class="box-subscribe__desc">Subscribe to our newsletter to stay update with what is new</h2>
+					<div class="form-row">
+						<input class="form-row__input form-row__input_email" type="email" name="email" placeholder="Email Address">
+					</div>
+					<button class="btn btn_subscribe" type="button">Subscribe</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="copyright">
+				<h2 class="copyright__text">Cssauthor.com © 2014 All Rights Reserved</h2>
+			</div>
+		</div>
+	</footer>
+	<div class="arrow-up">
+		<i class="fa fa-arrow-up fa-4x" aria-hidden="true"></i>
+	</div>
+	<script src="./js/index.js"></script>
+</body>
+</html>

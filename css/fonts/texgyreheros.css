@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'TeX Gyre Heros';
+	src: local('TeX Gyre Heros'), local('TeXGyreHeros-Regular'), url('texgyreheros.woff2') format('woff2'), url('texgyreheros.woff') format('woff'), url('texgyreheros.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'TeX Gyre Heros';
+	src: local('TeX Gyre Heros Italic'), local('TeXGyreHeros-Italic'), url('texgyreherositalic.woff2') format('woff2'), url('texgyreherositalic.woff') format('woff'), url('texgyreherositalic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'TeX Gyre Heros';
+	src: local('TeX Gyre Heros Bold'), local('TeXGyreHeros-Bold'), url('texgyreherosbold.woff2') format('woff2'), url('texgyreherosbold.woff') format('woff'), url('texgyreherosbold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'TeX Gyre Heros';
+	src: local('TeX Gyre Heros Bold Italic'), local('TeXGyreHeros-BoldItalic'), url('texgyreherosbolditalic.woff2') format('woff2'), url('texgyreherosbolditalic.woff') format('woff'), url('texgyreherosbolditalic.ttf') format('truetype');
+	font-weight: 700;
+	font-style: italic;
+}
