@@ -28,17 +28,16 @@ $(document).ready(function() {
 			$page.each(function(idx, el) {
 				var $topActivePage = $(el).offset().top - 100,
 					$bottomActivePage = $topActivePage + $(el).height(),
-					$scroll = $w.scrollTop(),
 					$activeId = $(el).attr("id");
 
-				getActivePage(el, $bottomActivePage, $topActivePage, $scroll, $activeId);
+				getActivePage($bottomActivePage, $topActivePage, $activeId);
 			});
 
-			function getActivePage($elem, $bottomActivePage, $topActivePage, $scroll, $activeId) {
+			function getActivePage($bottomActivePage, $topActivePage, $activeId) {
 				var $activeLink = $(".menu__link[href$='#" + $activeId + "']");
 				var $menuAllActiveLink = $(".menu__link.menu__link_active");
 
-				if ($scroll > $topActivePage && $scroll < $bottomActivePage) {
+				if ($top > $topActivePage && $top < $bottomActivePage) {
 					$menuAllActiveLink.removeClass("menu__link_active");
 					$activeLink.addClass("menu__link_active");
 				}
@@ -218,25 +217,24 @@ $(document).ready(function() {
 	
 	$arrowUp.on("click", function(e) {
 		e.preventDefault();
-		$("body, html").animate({ scrollTop: $headerContactHeight + 1}, 500);
+		$("body, html").animate({scrollTop: $headerContactHeight + 1}, 500);
 	});
 
 //close popup (consultation)
 
-	var $crossCancelConsultation = $(".cross-cancel_consultation"),
-		$popupConsultation = $(".popup_hidden"),
+	var $cancelConsultation = $(".cross-cancel_consultation, .backdrop"),
+		$popupConsultation = $(".popup"),
 		$btnConsultation = $(".btn_nav, .btn_promo"),
-		$backdrop = $(".backdrop");
+		$backdrop = $(".backdrop"),
+		$wrapPopup = $(".wrap-popup");
 
-	$btnConsultation.click(function() {
-		$popupConsultation.removeClass("popup_hidden");
-		$popupConsultation.addClass("animated-in-center");
-		$backdrop.addClass("backdrop_block");
+	$btnConsultation.on("click", function() {
+		$backdrop.fadeIn(500);
+		$wrapPopup.fadeIn(500);
 	});
 
-	$crossCancelConsultation.click(function() {
-	 	$popupConsultation.addClass("popup_hidden");
-	 	$popupConsultation.removeClass("animated-in-center");
-	 	$backdrop.removeClass("backdrop_block");
+	$cancelConsultation.on("click", function() {
+		$backdrop.fadeOut(500);
+		$wrapPopup.fadeOut(500);
 	});
 });

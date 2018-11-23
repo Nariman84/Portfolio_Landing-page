@@ -73,30 +73,17 @@ body {
 	padding-bottom: 120px;
 	background-color: #fff;
 }
-.backdrop {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	z-index: 15;
-	display: none;
-	background-color: black;
-	opacity: 0.7;
-}
-.backdrop_block {
-	display: block;
-}
+
 .wrap-popup {
 	position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 15;
-    transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	z-index: 100;
+	transform: translate(-50%, -50%);
+	display: none;
 }
 .popup {
 	padding: 10px 0;
-	z-index: 20;
 	width: 550px;
 	height: 410px;
 	border: 1px solid #cecece;
@@ -106,7 +93,15 @@ body {
 	color: #bcbcbc;
 	text-align: center;
 }
-.popup_hidden {
+.backdrop {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 90;
+	background-color: black;
+	opacity: 0.7;
 	display: none;
 }
 .box-form_consultation {
@@ -148,6 +143,10 @@ body {
 .block-phone__text {
 	vertical-align: bottom;
 }
+.block-email__text {
+	text-decoration: none;
+	color: #000;
+}
 .block-facebook {
 	width: 25px;
 	height: 25px;
@@ -156,6 +155,11 @@ body {
 	background-color: #1287bf;
 	color: #000;
 	line-height: 25px;
+}
+.block-facebook__link {
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 i.fa.fa-facebook {
 	color: #fff;
@@ -232,7 +236,7 @@ i.fa.fa-facebook {
 .page_promo {
 	padding-top: 180px;
 	padding-bottom: 235px;
-	background: url(../images/banner.png);
+	background: url(../images/banner.jpg);
 	background-color: #1287bf;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -603,6 +607,7 @@ i.fa.fa-facebook {
 	background-color: #515151;
 	border: 0;
 	margin-top: 30px;
+	color: #fff;
 }
 .form-row__input:focus {
 	box-shadow: 0 0 5px 1px #1287bf;
