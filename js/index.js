@@ -3,6 +3,7 @@
 $(document).ready(function() {
 
 	var $w = $(window),
+		$d = $(document),
 		$top = $w.scrollTop(),
 		$headerContact = $(".header_gray"),
 		$headerContactHeight = $headerContact.outerHeight(),
@@ -189,7 +190,10 @@ $(document).ready(function() {
 
 	$crossCancelForm.click(function() {
 		$formWrap.slideUp(500);
+		delAnimatedRotate($openFormBtn);
 	});
+
+//when does animation start
 
 	if($w.width() > 1024) {	
 		doAnimate();
@@ -199,6 +203,8 @@ $(document).ready(function() {
 			arrClassOpacity[i].classList.remove('opacity');
 		}
 	}
+
+
 
 //navigation menu
 	var $menuLink = $(".menu__link");
@@ -220,13 +226,15 @@ $(document).ready(function() {
 		$("body, html").animate({scrollTop: $headerContactHeight + 1}, 500);
 	});
 
-//close popup (consultation)
+//open-close popup (consultation)
 
 	var $cancelConsultation = $(".cross-cancel_consultation, .backdrop"),
 		$popupConsultation = $(".popup"),
 		$btnConsultation = $(".btn_nav, .btn_promo"),
 		$backdrop = $(".backdrop"),
 		$wrapPopup = $(".wrap-popup");
+
+		console.log($wrapPopup.is(":visible"));
 
 	$btnConsultation.on("click", function() {
 		$backdrop.fadeIn(500);
@@ -237,4 +245,23 @@ $(document).ready(function() {
 		$backdrop.fadeOut(500);
 		$wrapPopup.fadeOut(500);
 	});
+
+	$d.on("keydown", closePopup);
+
+	function closePopup(e) {
+		if (e.keyCode === 27) {
+			fadeOutPopup();
+		}
+	}
+
+	function fadeOutPopup() {
+		$wrapPopup.each(function() {
+			$elem = $(this);
+			if ($elem.is(":visible")) {
+				$elem.fadeOut(500);
+				$backdrop.fadeOut(500);
+			}
+		});
+	}
+	
 });

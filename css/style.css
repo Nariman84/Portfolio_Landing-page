@@ -461,7 +461,7 @@ i.fa.fa-facebook {
 .block-form:before {
 	position: absolute;
 	top: -35px;
-	left: 310px;
+	left: 305px;
 	border-right: 35px solid rgba(255, 255, 255, 0);
 	border-left: 35px solid rgba(255, 255, 255, 0);
 	border-bottom: 35px solid #fff;
@@ -520,8 +520,8 @@ i.fa.fa-facebook {
 	margin-right: auto;
 	margin-top: 15px;
 	margin-bottom: 10px;
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 }
 .open-form__btn {
 	position: absolute;
@@ -529,6 +529,7 @@ i.fa.fa-facebook {
 	height: 60px;
 	border: 2px solid #fff;
 	border-radius: 50%;
+	-webkit-border-radius: 50%;
 	cursor: pointer;
 	transition-duration: 1s;
 }
