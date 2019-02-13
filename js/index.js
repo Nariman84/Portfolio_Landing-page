@@ -4,6 +4,7 @@ $(document).ready(function() {
 
 	var $w = $(window),
 		$d = $(document),
+		$body = $("body"),
 		$top = $w.scrollTop(),
 		$headerContact = $(".header_gray"),
 		$headerContactHeight = $headerContact.outerHeight(),
@@ -176,12 +177,14 @@ $(document).ready(function() {
 
 	var $openFormBtn = $(".open-form__btn"),
 		$crossCancelForm = $(".cross-cancel_contact"),
-		$formWrap = $(".wrap-block-form");
+		$formWrap = $(".wrap-block-form"),
+		$analysisBlockForm = $(".block-form");
 
 	$openFormBtn.on("click", function() {
 		if ($formWrap.css("display") === "none") {
 			$formWrap.slideDown(500);
 			makeAnimatedRotate($openFormBtn);
+
 		} else {
 			$formWrap.slideUp(500);
 			delAnimatedRotate($openFormBtn);
@@ -193,9 +196,18 @@ $(document).ready(function() {
 		delAnimatedRotate($openFormBtn);
 	});
 
+	$body.click(function(e) {
+		if ($formWrap.css("display") === "block") {
+			var target = e.target;
+			if ($analysisBlockForm.has(target).length === 0 && $(target).has(".open-form__btn").length !== 0) {
+				$formWrap.slideUp(500);
+				delAnimatedRotate($openFormBtn);
+			}
+		}
+	});
 //when does animation start
 
-	if($w.width() > 1024) {	
+	if($w.width() > 1020) {	
 		doAnimate();
 	} else {
 		var arrClassOpacity = document.querySelectorAll(".opacity");
@@ -234,8 +246,6 @@ $(document).ready(function() {
 		$backdrop = $(".backdrop"),
 		$wrapPopup = $(".wrap-popup");
 
-		console.log($wrapPopup.is(":visible"));
-
 	$btnConsultation.on("click", function() {
 		$backdrop.fadeIn(500);
 		$wrapPopup.fadeIn(500);
@@ -264,4 +274,16 @@ $(document).ready(function() {
 		});
 	}
 	
+	var $menu = $(".menu"),
+		$wrapBtnMenu = $(".wrap-btn-menu"),
+		$btnMenu = $(".btn-menu"),
+		$nav = $(".nav");
+
+	//open-close menu-hamburger
+
+	$wrapBtnMenu.click(function() {
+		$btnMenu.toggleClass("btn-menu-show");
+		$nav.slideToggle();
+	});
+
 });
